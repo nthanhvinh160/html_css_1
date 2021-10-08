@@ -1,0 +1,687 @@
+<html lang="vi">
+<configuration>
+  <system.webServer>
+    <staticContent>
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+    </staticContent>
+    <modules runAllManagedModulesForAllRequests="true" />
+  </system.webServer>
+</configuration>
+
+<head>
+  <!-- include head.html -->
+  <title>FE004 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<!-- favicon -->
+<link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+<!-- meta social -->
+<meta name="twitter:card" content="" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="">
+<meta property="og:url" content="" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+<link rel="manifest" href="/manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Short name web app">
+<meta name="apple-mobile-web-app-title" content="Short name web app">
+<meta name="theme-color" content="#00a849">
+<meta name="msapplication-navbutton-color" content="#00a849">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/">
+
+
+  <!-- include styles.html -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+<!-- boostrap -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" -->
+    <!-- integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- build:css(.tmp) style/style.min.css -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+<!-- endbuild -->
+</head>
+
+<body class="wrapper">
+  <header class="main_header">
+<div class="nav-bar-container">
+  <div class="btn_menu">
+    <i class="fa fa-bars" style="font-size:30px"></i>
+  </div>
+  <a href="#" class="logo"> 
+    <svg width="140px" height="40px" viewBox="0 0 141 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M36.081 28.8241C28.7276 33.0697 19.3457 30.6193 14.9955 23.3649C10.5658 15.9781 13.086 6.23061 20.5441 1.92193C20.7733 1.78954 21.0043 1.66374 21.2372 1.54432C21.976 1.16545 21.7281 0.0504422 20.8985 0.0166567C17.1296 -0.136793 13.2715 0.767011 9.78139 2.85198C0.367304 8.4761 -2.79739 20.7028 2.69796 30.1925C8.25789 39.7939 20.5459 43.0799 30.1573 37.5307C33.5756 35.5571 36.1946 32.7313 37.9021 29.4768C38.289 28.7394 37.4514 27.9625 36.7518 28.4143C36.5329 28.5557 36.3093 28.6924 36.081 28.8241Z" fill="#FF9679"/>
+      <path d="M36.081 28.8241C28.7276 33.0697 19.3457 30.6193 14.9955 23.3649C10.5658 15.9781 13.086 6.23061 20.5441 1.92193C20.7733 1.78954 21.0043 1.66374 21.2372 1.54432C21.976 1.16545 21.7281 0.0504422 20.8985 0.0166567C17.1296 -0.136793 13.2715 0.767011 9.78139 2.85198C0.367304 8.4761 -2.79739 20.7028 2.69796 30.1925C8.25789 39.7939 20.5459 43.0799 30.1573 37.5307C33.5756 35.5571 36.1946 32.7313 37.9021 29.4768C38.289 28.7394 37.4514 27.9625 36.7518 28.4143C36.5329 28.5557 36.3093 28.6924 36.081 28.8241Z" fill="#FF9679"/>
+      <path d="M36.081 28.8242C29.6914 32.5131 21.7704 31.1465 16.9496 25.9656C12.7713 29.6675 7.84831 31.612 3.39136 31.3034C9.22904 40.0394 20.9268 42.8599 30.1572 37.5307C33.5755 35.5571 36.1945 32.7313 37.9019 29.4768C38.2888 28.7394 37.4512 27.9625 36.7517 28.4143C36.5328 28.5558 36.3092 28.6924 36.081 28.8242Z" fill="#FF4A17"/>
+      <path d="M25.8052 13.6868L26.1399 13.5433C26.3291 13.4622 26.3291 13.1941 26.1399 13.113L25.8052 12.9695C24.5173 12.4176 23.527 11.3413 23.084 10.0121L22.7763 9.08913C22.7052 8.87573 22.4033 8.87573 22.3321 9.08913L22.0244 10.0121C21.5814 11.3413 20.5911 12.4176 19.3032 12.9695L18.9685 13.113C18.7794 13.1941 18.7794 13.4622 18.9685 13.5433L19.3032 13.6868C20.5911 14.2388 21.5814 15.315 22.0244 16.6442L22.3321 17.5672C22.4032 17.7806 22.7051 17.7806 22.7763 17.5672L23.084 16.6442C23.527 15.315 24.5173 14.2387 25.8052 13.6868Z" fill="#FF4A17"/>
+      <path d="M33.9026 22.0356L34.0699 21.9639C34.2591 21.8828 34.2591 21.6146 34.0699 21.5336L33.9026 21.4618C32.8723 21.0203 32.0801 20.1593 31.7256 19.0959L31.5239 18.4907C31.4528 18.2773 31.151 18.2773 31.0798 18.4907L30.8781 19.0959C30.5236 20.1593 29.7313 21.0203 28.7011 21.4618L28.5337 21.5336C28.3445 21.6146 28.3445 21.8828 28.5337 21.9639L28.7011 22.0356C29.7313 22.4772 30.5236 23.3382 30.8781 24.4016L31.0798 25.0067C31.1509 25.2201 31.4527 25.2201 31.5239 25.0067L31.7256 24.4016C32.0801 23.3382 32.8723 22.4772 33.9026 22.0356Z" fill="#FF4A17"/>
+      <path d="M34.6422 10.2731C34.8314 10.1921 34.8314 9.92389 34.6422 9.84281C33.8695 9.51163 33.2753 8.86585 33.0094 8.06836L32.9137 7.78102C32.8426 7.56762 32.5407 7.56762 32.4695 7.78102L32.3737 8.06836C32.1079 8.86585 31.5137 9.51163 30.741 9.84281C30.5518 9.92389 30.5518 10.1921 30.741 10.2731C31.5137 10.6043 32.1079 11.2501 32.3737 12.0476L32.4695 12.3349C32.5406 12.5483 32.8425 12.5483 32.9137 12.3349L33.0094 12.0476C33.2753 11.2501 33.8695 10.6043 34.6422 10.2731Z" fill="#FF4A17"/>
+      <path d="M53.1484 17.8516H57.6016C58.7995 17.8516 59.6589 17.6693 60.1797 17.3047C60.7005 16.9401 60.9609 16.3542 60.9609 15.5469C60.9609 15.1302 61.3516 14.9219 62.1328 14.9219C62.9401 14.9219 63.3438 15.1302 63.3438 15.5469V22.9688C63.3438 23.4115 62.9401 23.6328 62.1328 23.6328C61.3516 23.6328 60.9609 23.4115 60.9609 22.9688C60.9609 22.1875 60.6875 21.5885 60.1406 21.1719C59.6198 20.7552 58.7604 20.5469 57.5625 20.5469H53.1484V34.0625H48.9688V10.2344C48.9688 9.40104 48.8776 8.82812 48.6953 8.51562C48.5391 8.20312 48.3177 8.00781 48.0312 7.92969C47.6927 7.82552 47.3802 7.69531 47.0938 7.53906C46.8073 7.35677 46.6641 7.08333 46.6641 6.71875C46.6641 6.06771 47.1198 5.74219 48.0312 5.74219H64.6328L64.8281 10.625C64.8281 11.3021 64.4375 11.6536 63.6562 11.6797C62.875 11.6797 62.4062 11.3411 62.25 10.6641C62.0677 9.9349 61.8073 9.38802 61.4688 9.02344C61.1302 8.65885 60.401 8.47656 59.2812 8.47656H54.75C53.6823 8.47656 53.1484 8.98438 53.1484 10V17.8516Z" fill="#FF4A17"/>
+      <path d="M72.5625 18.0078H77.0156C78.2135 18.0078 79.0729 17.8255 79.5938 17.4609C80.1146 17.0964 80.375 16.5104 80.375 15.7031C80.375 15.2865 80.7656 15.0781 81.5469 15.0781C82.3542 15.0781 82.7578 15.2865 82.7578 15.7031V23.125C82.7578 23.5677 82.3542 23.7891 81.5469 23.7891C80.7656 23.7891 80.375 23.5677 80.375 23.125C80.375 22.3438 80.1016 21.7448 79.5547 21.3281C79.0339 20.9115 78.1875 20.7031 77.0156 20.7031H72.5625V29.8828C72.5625 30.8203 73.1094 31.2891 74.2031 31.2891H79.3594C80.4271 31.2891 81.1432 31.0156 81.5078 30.4688C81.8724 29.9219 82.1198 29.349 82.25 28.75C82.3802 28.0469 82.862 27.7344 83.6953 27.8125C84.5286 27.8906 84.9453 28.2292 84.9453 28.8281L84.6719 34.0625H68.3828V10.2344C68.3828 9.40104 68.3177 8.84115 68.1875 8.55469C68.0833 8.26823 67.862 8.07292 67.5234 7.96875C67.1068 7.83854 66.7552 7.69531 66.4688 7.53906C66.2083 7.35677 66.0781 7.08333 66.0781 6.71875C66.0781 6.06771 66.5339 5.74219 67.4453 5.74219H84.0469L84.2422 10.625C84.2422 11.3021 83.8255 11.6536 82.9922 11.6797C82.1589 11.6797 81.7161 11.3281 81.6641 10.625C81.612 10.1823 81.3906 9.72656 81 9.25781C80.6354 8.76302 79.8672 8.51562 78.6953 8.51562H74.1641C73.0964 8.51562 72.5625 8.9974 72.5625 9.96094V18.0078Z" fill="#FF4A17"/>
+      <path d="M86.7031 20.0391C86.7031 15.5599 87.4323 12.0182 88.8906 9.41406C90.349 6.78385 92.4453 5.46875 95.1797 5.46875C97.9401 5.46875 100.036 6.78385 101.469 9.41406C102.927 12.0182 103.656 15.5599 103.656 20.0391C103.656 24.5182 102.927 28.0599 101.469 30.6641C100.036 33.2682 97.9401 34.5703 95.1797 34.5703C92.4453 34.5703 90.349 33.2682 88.8906 30.6641C87.4323 28.0599 86.7031 24.5182 86.7031 20.0391ZM91.0781 20.0391C91.0781 24.1536 91.4818 27.1354 92.2891 28.9844C93.1224 30.8073 94.0859 31.7188 95.1797 31.7188C96.2734 31.7188 97.237 30.8073 98.0703 28.9844C98.9036 27.1354 99.3203 24.1536 99.3203 20.0391C99.3203 15.8984 98.9036 12.9167 98.0703 11.0938C97.237 9.27083 96.2734 8.35938 95.1797 8.35938C94.0859 8.35938 93.1224 9.27083 92.2891 11.0938C91.4818 12.9167 91.0781 15.8984 91.0781 20.0391Z" fill="#FF4A17"/>
+      <path d="M104.711 20.0391C104.711 15.5599 105.44 12.0182 106.898 9.41406C108.357 6.78385 110.453 5.46875 113.188 5.46875C115.948 5.46875 118.044 6.78385 119.477 9.41406C120.935 12.0182 121.664 15.5599 121.664 20.0391C121.664 24.5182 120.935 28.0599 119.477 30.6641C118.044 33.2682 115.948 34.5703 113.188 34.5703C110.453 34.5703 108.357 33.2682 106.898 30.6641C105.44 28.0599 104.711 24.5182 104.711 20.0391ZM109.086 20.0391C109.086 24.1536 109.49 27.1354 110.297 28.9844C111.13 30.8073 112.094 31.7188 113.188 31.7188C114.281 31.7188 115.245 30.8073 116.078 28.9844C116.911 27.1354 117.328 24.1536 117.328 20.0391C117.328 15.8984 116.911 12.9167 116.078 11.0938C115.245 9.27083 114.281 8.35938 113.188 8.35938C112.094 8.35938 111.13 9.27083 110.297 11.0938C109.49 12.9167 109.086 15.8984 109.086 20.0391Z" fill="#FF4A17"/>
+      <path d="M132.562 26.3281H122.328V23.75L132.523 5.46875H136.703V23.4375H140.102V26.3281H136.703V34.1016H132.562V26.3281ZM126.43 23.4375H132.562V12.1875L126.43 23.4375Z" fill="#FF4A17"/>
+    </svg>   
+  </a>
+  <nav class="top_nav">
+    <ul class="top_nav_list" id="nav_active">
+      <li class="top_nav_list_item active"> <a href="#" class="top_nav_list_item--link"> Home </a> </li>
+      <li class="top_nav_list_item"> <a href="#" class="top_nav_list_item--link"> Pages </a> </li>
+      <li class="top_nav_list_item"> <a href="#ssc" class="top_nav_list_item--link"> Services </a> </li>
+      <li class="top_nav_list_item"> <a href="#blog" class="top_nav_list_item--link"> Blog </a> </li>
+      <li class="top_nav_list_item"> <a href="#portfolio" class="top_nav_list_item--link"> Portfolio </a> </li>
+      <li class="top_nav_list_item"> <a href="#wrapper_section_d" class="top_nav_list_item--link"> Shop </a> </li>
+      <li class="top_nav_list_item"> <a href="#footer" class="top_nav_list_item--link"> Contact </a> </li>
+    </ul>
+  </nav>
+ <div> <a href="#" class="btn btn_link_consulting_now"> Consulting Now </a> </div>   
+</div>
+<div class="overlay_menu"></div>
+<div class="reponsive_menu">
+  <nav class="reponsive_menu_top_nav">
+    <ul class="reponsive_menu_top_nav_list" id="reponsive_menu_nav_active">
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Home </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Pages </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Services </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Blog </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Portfolio </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Shop </a> </li>
+      <li class="reponsive_menu_top_nav_list_item"> <a href="#" class="reponsive_menu_top_nav_list_item--link"> Contact </a> </li>
+    </ul>
+  </nav>
+  <a href="#" class="btn btn_link_consulting_now"> Consulting Now </a>  
+</div>
+</header>
+
+
+  <section class="wrapper_section_a">
+    <div class="slideshow_banner">
+      <div class="slideshow_item">
+        <div class="slideshow_item_background bg1">
+          <div class="overlay_background"></div>
+          <div class="triangle1"></div>
+          <div class="triangle2"></div>
+          <div class="triangle3"></div>
+          <div class="triangle_bottom"></div>
+          <h4> Business & consulting </h4>
+          <h3> Making Difference Growth Your Business With Modern Ideas </h3>
+          <span><a href="#" class="btn btn_get_started"> Get Started </a></span>
+        </div>
+      </div>
+      <div class="slideshow_item">
+        <div class="slideshow_item_background bg2">
+          <div class="overlay_background"></div>
+          <div class="triangle1"></div>
+          <div class="triangle2"></div>
+          <div class="triangle3"></div>
+          <div class="triangle_bottom"></div>
+          <h4> Business and consulting </h4>
+          <h3> Making Difference Growth Your Business With Modern Ideas </h3>
+          <a href="#" class="btn btn_get_started"> Get Started </a>
+        </div>
+      </div>
+      <div class="slideshow_item">
+        <div class="slideshow_item_background bg3">
+          <div class="overlay_background"></div>
+          <div class="triangle1"></div>
+          <div class="triangle2"></div>
+          <div class="triangle3"></div>
+          <div class="triangle_bottom"></div>
+          <h4> Business and consulting </h4>
+          <h3> Making Difference Growth Your Business With Modern Ideas </h3>
+          <a href="#" class="btn btn_get_started"> Get Started </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="wrapper_section_b">
+    <div class="containers">
+      <div class="rows">
+        <div class="box_left">
+          <div class="thumb">
+            <img src="images/sectionb.jpg" alt="">
+          </div>
+        </div>
+        <div class="box_right">
+          <div class="info_section_b">
+            <h4>abouts</h4>
+            <h3> Professional Business Guidance Agency </h3>
+            <div class="info_section_b_moreInfo">
+              <p>Sedut perspiciatis unde omnis iste natus error sit voluptat em accusantium doloremq laudantium, totam
+                raperiaeaque ipsa quae ab illo inventore veritatis et quasi</p>
+              <p>Doloremque laudantium, totam raperiaeaque ipsa quae ab illo inventore veritatis et quasi</p>
+            </div>
+            <ul class="info_section_b_list">
+              <li class="info_section_b_list_item">
+                <div class="icon_tick"></div>
+                <p> Business & Consulting Agency</p>
+              </li>
+              <li class="info_section_b_list_item">
+                <div class="icon_tick"></div>
+                <p> Awards Winning Business Comapny</p>
+              </li>
+            </ul>
+            <a href="#" class="btn btn_learn_more"> Learn More </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper_section_c" id="ssc">
+    <div class="containers">
+      <div class="background_ss_c"></div>
+      <div class="wrapper_section_c_header">
+        <h4> Comany Services </h4>
+        <h3> We Provide Most Exclusive <br> Service For Business </h3>
+      </div>
+      <div class="wrapper_section_c_content">
+        <div class="wrapper_section_c_content_grid">
+          <div class="wrapper_section_c_content_grid_item">
+            <div class="wrapper_section_c_content_grid_item_header"
+              style=" background-image: url('images/icon/section_c_1.svg')"> </div>
+            <h5> creative idea </h5>
+            <p>Sed ut perspiciatis unde omnis <br> iste natus erro volupta </p>
+            <div class="wrapper_section_c_content_item_icon"></div>
+            <div class="border-bottom-ssc"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_c_content_grid">
+          <div class="wrapper_section_c_content_grid_item">
+            <div class="wrapper_section_c_content_grid_item_header"
+              style=" background-image: url('images/icon/section_c_2.svg')"> </div>
+            <h5> Business Strategy</h5>
+            <p>Sed ut perspiciatis unde omnis <br> iste natus erro volupta </p>
+            <div class="wrapper_section_c_content_item_icon"></div>
+            <div class="border-bottom-ssc"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_c_content_grid">
+          <div class="wrapper_section_c_content_grid_item">
+            <div class="wrapper_section_c_content_grid_item_header"
+              style=" background-image: url('images/icon/section_c_3.svg')"> </div>
+            <h5> Relationship Buildup</h5>
+            <p>Sed ut perspiciatis unde omnis <br> iste natus erro volupta </p>
+            <div class="wrapper_section_c_content_item_icon"></div>
+            <div class="border-bottom-ssc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--------ss_d -->
+  <section class="wrapper_section_d" id="wrapper_section_d">
+    <div class="containers">
+      <div class="overlay_background"></div>
+      <div class="rows">
+        <div class="box_left">
+          <div class="info_section_d">
+            <h4>watch videos</h4>
+            <h3> Exclusive Video Presentation About Recent Project </h3>
+            <p>Ranim ad minima veniam, quis nostrum exercitationem ullam corpsuscipit laboriosam, nisi ut aliquid exea
+              commodi consequa turuis autem</p>
+            <a href="#" class="btn btn_need_any_project"> Need Any Project </a>
+          </div>
+        </div>
+        <div class="box_right">
+          <div class="thumb">
+            <a href="#wrapper_section_d" class="btn_play_video" onclick="toggle();"><img
+                src="images/icon/play_button.png" alt=""></a>
+          </div>
+          <div class="video">
+            <iframe class="video_demo" width="760" height="415" src="https://www.youtube.com/embed/GspDybPhOeY?start=6"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <i class="fa fa-times" onclick="toggle();" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper_section_e">
+    <div class="containers">
+      <div class="wrapper_section_e_header">
+        <h4> our core features </h4>
+        <h3> We Are Specialist For Many Business Solutions </h3>
+      </div>
+      <div class="wrapper_section_e_content">
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e1.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e2.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e3.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e4.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e5.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+        <div class="wrapper_section_e_content_grid">
+          <div class="wrapper_section_e_content_grid_item" style="background-image: url('images/section_e6.jpg');">
+            <div class="wrapper_section_e_content_grid_item_info">
+              <div class="wrapper_section_e_content_grid_item_info_icon"> </div>
+              <h4>Free Consulting</h4>
+              <p>Join us for consultatoins</p>
+            </div>
+            <div class="triangel_bottom1"></div>
+            <div class="triangel_bottom2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper_section_f">
+    <div class="containers">
+      <div class="main_content">
+        <div class="rows">
+          <div class="box_left">
+            <div class="thumb">
+              <img src="images/sectionf.png" alt="">
+            </div>
+          </div>
+          <div class="box_right">
+            <div class="info_section_f">
+              <h4>What We Do</h4>
+              <h3> Why Choose Finsa Business Agency </h3>
+              <p>Sedut perspiciatis unde omnis iste natus evoluptat em accusantium doloremque laudantium</p>
+              <ul class="info_section_f_list">
+                <li class="info_section_f_list_item">
+                  <div class="icon_tick_rounding"></div>
+                  <p> Specialist Company Advisor Team</p>
+                </li>
+                <li class="info_section_f_list_item">
+                  <div class="icon_tick_rounding"></div>
+                  <p> Understanding Machines OpenS tandard </p>
+                </li>
+                <li class="info_section_f_list_item">
+                  <div class="icon_tick_rounding"></div>
+                  <p> Can Data Visualization Improve Mobile </p>
+                </li>
+              </ul>
+              <a href="#" class="btn btn_join_with_us"> Join With Us </a>
+            </div>
+          </div>
+        </div>
+        <div class="box_shadow_custom">
+          <h5>.</h5>
+        </div>
+      </div>
+      <ul class="mark_list">
+        <li class="mark_list_item">
+          <div class="mark_list_item_icon"> </div>
+          <h3 class="mark_list_item_number"> 3568 </h3>
+          <p> Project Compalte </p>
+        </li>
+        <li class="mark_list_item">
+          <div class="mark_list_item_icon icon2"> </div>
+          <h3 class="mark_list_item_number"> 7859 </h3>
+          <p> Satisfied Clients </p>
+        </li>
+        <li class="mark_list_item">
+          <div class="mark_list_item_icon icon3"> </div>
+          <h3 class="mark_list_item_number"> 6352 </h3>
+          <p> International Awards </p>
+        </li>
+        <li class="mark_list_item">
+          <div class="mark_list_item_icon icon4"> </div>
+          <h3 class="mark_list_item_number"> 7855 </h3>
+          <p> Expert Team Members </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrapper_section_g" id="portfolio">
+    <div class="containers">
+      <div class="header">
+        <h4>Meet Our Advisors </h4>
+        <h3>We Have An Exclusive Team Member</h3>
+      </div>
+      <div class="info_advisors">
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg2">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg3">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg4">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg5">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg6">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg7">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+        <div class="info_advisors_grid">
+          <div class="info_advisors_grid_item bg8">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="icon_info"></div>
+            <div class="border_right"></div>
+            <div class="border_bottom"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper_section_h" id="blog">
+    <div class="containers">
+      <div class="rows">
+        <div class="box_left">
+          <div class="header">
+            <h4>important articles</h4>
+            <h3>Something Know Our <br>
+              Latest News & Blog</h3>
+          </div>
+          <div class="btn_more">
+            <a href="#" class="btn btn_view_all_news"> View All News </a>
+          </div>
+        </div>
+        <div class="box_right">
+          <div class="wrapper_section_i_content">
+            <div class="wrapper_section_i_content_grid">
+              <div class="wrapper_section_i_content_grid_item">
+                <a href="#" class="wrapper_section_i_content_grid_item--link">
+                  <div class="thumb">
+                    <img src="images/section_h1.jpg" alt="image1">
+                  </div>
+                  <div class="time">
+                    <div class="icon_calendar"></div>
+                    <span>25 AUG 2020</span>
+                  </div>
+                  <h5>How Performance Visiblety With GitLab CI And Hood </h5>
+                </a>
+                <p> Sedut perspiciatis unde omnis nat erroroluptat accusantium laudantim totam raperiaeaqupsa quae unde
+                  omnis nat erroroluptat </p>
+                <div class="learn_more">
+                  <a href=""> Learn more </a>
+                  <div class="icon_arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper_section_i_content_grid">
+              <div class="wrapper_section_i_content_grid_item">
+                <a href="#" class="wrapper_section_i_content_grid_item--link">
+                  <div class="thumb">
+                    <img src="images/section_h2.jpg" alt="image1">
+                  </div>
+                  <div class="time">
+                    <div class="icon_calendar"></div>
+                    <span>25 AUG 2020</span>
+                  </div>
+                  <h5>How Performance Visiblety With GitLab CI And Hood </h5>
+                </a>
+                <p> Sedut perspiciatis unde omnis nat erroroluptat accusantium laudantim totam raperiaeaqupsa quae unde
+                  omnis nat erroroluptat </p>
+                <div class="learn_more">
+                  <a href=""> Learn more </a>
+                  <div class="icon_arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper_section_i_content_grid">
+              <div class="wrapper_section_i_content_grid_item">
+                <a href="#" class="wrapper_section_i_content_grid_item--link">
+                  <div class="thumb">
+                    <img src="images/section_h3.jpg" alt="image1">
+                  </div>
+                  <div class="time">
+                    <div class="icon_calendar"></div>
+                    <span>25 AUG 2020</span>
+                  </div>
+                  <h5>How Performance Visiblety With GitLab CI And Hood </h5>
+                </a>
+                <p> Sedut perspiciatis unde omnis nat erroroluptat accusantium laudantim totam raperiaeaqupsa quae unde
+                  omnis nat erroroluptat </p>
+                <div class="learn_more">
+                  <a href=""> Learn more </a>
+                  <div class="icon_arrow"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main_footer" id="footer">
+ <div class="containers_footer">
+        <div class="rows">
+                <div class="box_top">
+                  <div class="box_top_left">
+                          <div class="logo_footer"></div>
+                          <p>Power of choice is untrammelled & when nothing prevents our being able </p>
+                  </div>
+                  <div class="box_top_right">
+                          <div class="subscribe_input">
+                                  <h5> Subscribe Our Newsletters </h5>
+                                  <form action="#">
+                                          <label for="email">Enter your Email</label>
+                                          <input type="text" id="email" name="email"><br><br>
+                                  </form>      
+                          </div>
+                          <div class="subscribe_button">
+                                  <a href="#" class="btn btn_subscribe"> Subscribe Now </a>
+                          </div>
+                  </div>
+                </div>
+                <div class="box_bottom">
+                        <div class="box_bottom_item">
+                                <h5>Quick Links</h5>
+                                <p> <a href=""> Company History </a> </p>
+                                <p> <a href=""> Latest News & Blog </a> </p>
+                                <p> <a href=""> Popular Services </a> </p>
+                                <p> <a href=""> Business & Consulting </a> </p>
+                                <p> <a href=""> Financial Planning </a> </p>
+                        </div>
+                        <div class="box_bottom_item">
+                                <h5>Company</h5>
+                                <p> <a href=""> About Comapny </a> </p>
+                                <p> <a href=""> World Wide Clients </a> </p>
+                                <p> <a href=""> Happy People’s </a> </p>
+                                <p> <a href=""> Winning Awards  </a> </p>
+                                <p> <a href=""> Company Statics </a> </p>
+                        </div>
+                        <div class="box_bottom_item">
+                                <h5>Contact Us </h5>
+                                <p class="first_p"> <a href=""> Untrammelled & nothing preven our being able </a> </p>
+                                <div class="icon_item">
+                                        <div class="icon_general icon_phone"></div>
+                                        <p>+012 (345) 6789</p>
+                                </div>
+                                <div class="icon_item">
+                                        <div class="icon_general icon_email"></div>
+                                        <p>suport@gmai.com</p>
+                                </div>
+                                <div class="icon_item">
+                                        <div class="icon_general icon_location"></div>
+                                        <p>Broklyn Street USA</p>
+                                </div>
+                        </div>
+                        <div class="box_bottom_item">
+                          <h5>Follow Instagram</h5>
+                          <div class="category">
+                                  <div class="category_item">
+                                        <a href=""> <img src="images/section_g4.jpg" alt="first_contact"> </a> 
+                                  </div>
+                                  <div class="category_item">
+                                          <a href=""> <img src="images/section_e6.jpg" alt="first_contact"> </a> 
+                                  </div>
+                                  <div class="category_item">
+                                          <a href=""> <img src="images/section_g2.jpg" alt="first_contact"> </a> 
+                                  </div>
+                                  <div class="category_item">
+                                          <a href=""> <img src="images/section_g1.jpg" alt="first_contact"> </a> 
+                                  </div>
+                                  <div class="category_item">
+                                          <a href=""> <img src="images/section_g5.jpg" alt="first_contact"> </a> 
+                                  </div>
+                                  <div class="category_item">
+                                          <a href=""> <img src="images/section_g8.jpg" alt="first_contact"> </a> 
+                                  </div>
+                          </div>
+                  </div>
+                </div>
+                <div class="box_last">
+                        <p> Copy@ <span style="color:  #FF4A17;"> Fe004 </span> . Example -2021</p>
+                        <p> All Right Reserved Design By Example </p>
+                </div>
+        </div>
+        <div class="background_footer_top"></div>
+        <div class="background_footer_bottom"></div>
+        <div class="background_footer_ellipse"></div>
+ </div>
+</footer>
+
+  <!-- include scripts.html -->
+  <!-- boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- build:js script/script.min.js -->
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- endbuild -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
